@@ -27,13 +27,13 @@
 		"remark-emoji": "^2.1.0",
 		"remark-html": "^12.0.0",
 		"remark-slug": "^6.0.0",
-		"tailwindcss": "^1.8.6"
+		"tailwindcss": "^1.8.8"
 	},
 	"devDependencies": {
 		"@tailwindcss/custom-forms": "^0.2.1",
 		"eslint": "^7.8.1",
 		"eslint-plugin-react": "^7.20.6",
-		"eslint-plugin-react-hooks": "^4.1.0",
+		"eslint-plugin-react-hooks": "^4.1.2",
 		"nextjs-sitemap-generator": "^1.1.1",
 		"prettier": "^2.1.1",
 		"prettier-plugin-package": "^1.0.0"
