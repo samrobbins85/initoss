@@ -74,7 +74,7 @@ function Lecture({ tree, postData, params }) {
 								/_/g,
 								" "
 						  ) + " | "
-						: "") + "Sam's Notes"}
+						: "") + "init.OSS"}
 				</title>
 				<meta
 					name="description"

@@ -7,8 +7,14 @@ export default function HomePage({ tree }) {
 			></link>
 			<div className="grid">
 				<div className="text-center text-6xl font-extrabold leading-none tracking-tight">
-					<h1 className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500 text-center">
-						{"init OSS"}
+					<h1 className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500 text-center inline-block">
+						init
+					</h1>
+					<h1 className="bg-clip-text text-gray-700 text-center inline-block">
+						.
+					</h1>
+					<h1 className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-orange-500 text-center inline-block">
+						OSS
 					</h1>
 				</div>
 

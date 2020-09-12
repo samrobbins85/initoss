@@ -23,7 +23,7 @@ const NavBar = React.forwardRef((props, ref) => {
 					</button>
 				</span>
 				<span className="hidden sm:block mr-6 self-center">
-					<a href="/">{"init OSS"}</a>
+					<a href="/">{"init.OSS"}</a>
 				</span>
 			</div>
 			<a
