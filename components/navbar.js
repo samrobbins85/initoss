@@ -1,20 +1,6 @@
 import { useEffect } from "react";
 
 const NavBar = React.forwardRef((props, ref) => {
-	useEffect(() => {
-		if (window.docsearch) {
-			window.docsearch({
-				apiKey: "57c68f79baba1d8f5602a61b87902e6c",
-				indexName: "csnotes",
-				appId: "PEW75Q4NDD",
-				inputSelector: ".docsearch-input", // the selector of my search input
-			});
-		} else {
-			console.warn("Search has failed to load");
-			// do something here
-		}
-	}, []);
-
 	return (
 		<nav className="fixed h-16 p-4 bg-white border-b border-gray-200 shadow w-full z-20 flex justify-between">
 			<div className="flex">
@@ -37,17 +23,12 @@ const NavBar = React.forwardRef((props, ref) => {
 					</button>
 				</span>
 				<span className="hidden sm:block mr-6 self-center">
-					<a href="/">{"Sam's Notes"}</a>
+					<a href="/">{"init OSS"}</a>
 				</span>
 			</div>
-			<input
-				type="search"
-				className="docsearch-input form-input -mt-1 pt-2 pb-2"
-				placeholder="Search"
-			/>
 			<a
 				className="hidden sm:flex"
-				href="https://github.com/samrobbins85/notes-site"
+				href="https://github.com/samrobbins85/initoss"
 				aria-label="GitHub Repository"
 			>
 				<svg viewBox="0 0 24 24" className="h-5 self-center">
