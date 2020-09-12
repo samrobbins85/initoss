@@ -1,0 +1,41 @@
+{
+	"name": "notes-site",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"build": "next build",
+		"dev": "next",
+		"export": "next build && next export",
+		"start": "next start"
+	},
+	"dependencies": {
+		"@mapbox/rehype-prism": "^0.5.0",
+		"@mdx-js/loader": "^1.6.7",
+		"@mdx-js/mdx": "^1.6.6",
+		"@tailwindcss/typography": "^0.2.0",
+		"autoprefixer": "^9.8.6",
+		"directory-tree": "^2.2.4",
+		"gray-matter": "^4.0.2",
+		"katex": "^0.12.0",
+		"next": "^9.5.3",
+		"postcss-import": "^12.0.1",
+		"postcss-preset-env": "^6.7.0",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"remark": "^12.0.1",
+		"remark-autolink-headings": "^6.0.1",
+		"remark-emoji": "^2.1.0",
+		"remark-html": "^12.0.0",
+		"remark-slug": "^6.0.0",
+		"tailwindcss": "^1.8.6"
+	},
+	"devDependencies": {
+		"@tailwindcss/custom-forms": "^0.2.1",
+		"eslint": "^7.8.1",
+		"eslint-plugin-react": "^7.20.6",
+		"eslint-plugin-react-hooks": "^4.1.0",
+		"nextjs-sitemap-generator": "^1.1.1",
+		"prettier": "^2.1.1",
+		"prettier-plugin-package": "^1.0.0"
+	}
+}
