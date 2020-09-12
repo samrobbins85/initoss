@@ -78,7 +78,7 @@ function Lecture({ tree, postData, params }) {
 				</title>
 				<meta
 					name="description"
-					content="Notes from my course at Durham University"
+					content="Getting started with contributing to open source software"
 				/>
 			</Head>
 			<NavBar toggleFunction={toggleSidebar} ref={node2} />
