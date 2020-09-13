@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-
+import Link from "next/link";
 const NavBar = React.forwardRef((props, ref) => {
 	return (
 		<nav className="fixed h-16 p-4 bg-white border-b border-gray-200 shadow w-full z-20 flex justify-between">
@@ -22,10 +22,14 @@ const NavBar = React.forwardRef((props, ref) => {
 				</button>
 			</span>
 			<span className="hidden sm:block ">
-				<a href="/">{"init.OSS"}</a>
+				<Link href="/">
+					<a>{"init.OSS"}</a>
+				</Link>
 			</span>
 			<div className="flex justify-start items-center">
-				<span className="px-4">Learn to Code</span>
+				<Link href="/learn_code">
+					<a className="px-4">Learn to Code</a>
+				</Link>
 				<span className="px-4">Learn to Contribute</span>
 				<span className="px-4">Practice Contributing</span>
 				<span className="px-4">Contribute</span>
