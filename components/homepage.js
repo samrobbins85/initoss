@@ -6,7 +6,7 @@ export default function HomePage({ tree }) {
 				rel="stylesheet"
 			></link>
 			<div className="grid">
-				<div className="text-center text-6xl font-extrabold leading-none tracking-tight">
+				<div className="text-center text-6xl leading-none tracking-tight">
 					<h1 className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500 text-center inline-block">
 						init
 					</h1>
