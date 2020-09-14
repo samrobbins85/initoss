@@ -23,7 +23,7 @@ const NavBar = React.forwardRef((props, ref) => {
 			</span>
 			<span className="hidden sm:block ">
 				<Link href="/">
-					<a>
+					<a className="text-xl">
 						<span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500 text-center inline-block">
 							init
 						</span>

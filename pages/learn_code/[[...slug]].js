@@ -6,7 +6,6 @@ import { getTree, getPaths } from "@/lib/tree";
 import { getPostData } from "@/lib/lecture";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import renderMathInElement from "katex/dist/contrib/auto-render.mjs";
 import HomePage from "@/components/learn_code/homepage";
 function Lecture({ tree, postData, params }) {
 	const router = useRouter();
@@ -32,25 +31,6 @@ function Lecture({ tree, postData, params }) {
 	useEffect(() => {
 		router.events.on("routeChangeComplete", function () {
 			setSidebarVisible(false);
-			renderMathInElement(document.body, {
-				delimiters: [
-					{ left: "$$", right: "$$", display: true },
-					{ left: "$", right: "$", display: false },
-					{ left: "\\(", right: "\\)", display: false },
-					{ left: "\\[", right: "\\]", display: true },
-				],
-			});
-		});
-	}, []);
-
-	useEffect(() => {
-		renderMathInElement(document.body, {
-			delimiters: [
-				{ left: "$$", right: "$$", display: true },
-				{ left: "$", right: "$", display: false },
-				{ left: "\\(", right: "\\)", display: false },
-				{ left: "\\[", right: "\\]", display: true },
-			],
 		});
 	}, []);
 
@@ -70,10 +50,9 @@ function Lecture({ tree, postData, params }) {
 			<Head>
 				<title>
 					{(params.slug !== undefined
-						? params.slug[params.slug.length - 1].replace(
-								/_/g,
-								" "
-						  ) + " | "
+						? params.slug[params.slug.length - 1]
+								.replace(/_/g, " ")
+								.split("-")[1] + " | "
 						: "") + "init.OSS"}
 				</title>
 				<meta
@@ -93,11 +72,13 @@ function Lecture({ tree, postData, params }) {
 					{postData.contentHtml !== undefined && (
 						<>
 							<div className="p-6 pt-24 pb-12">
-								<h1 className="text-4xl sm:text-6xl text-center font-semibold title">
+								<h1 className="text-4xl sm:text-5xl text-center font-semibold title">
 									{postData.title}
 								</h1>
 								<h2 className="text-center text-lg text-gray-700">
-									{params.slug[1].replace(/_/g, " ")}
+									{params.slug.length > 1
+										? params.slug[0].replace(/_/g, " ")
+										: "Learn to Code"}
 								</h2>
 							</div>
 							<hr className="pb-4" />
@@ -112,9 +93,9 @@ function Lecture({ tree, postData, params }) {
 									<a
 										className="flex content-center hover:underline text-blue-700"
 										href={
-											"https://github.com/samrobbins85/notes-site/blob/master/notes/" +
+											"https://github.com/samrobbins85/initoss/blob/master/page_content/Learn_to_Code/" +
 											params.slug.join("/") +
-											".md"
+											".mdx"
 										}
 									>
 										<svg
@@ -141,24 +122,13 @@ function Lecture({ tree, postData, params }) {
 						postData.contentHtml === undefined && (
 							<>
 								<h1 className="pt-20 text-5xl text-center font-bold text-purple-800 w-5/6 mx-auto">
-									{params.slug.length <= 2 &&
-										params.slug[
-											params.slug.length - 1
-										].replace(/_/g, " ")}
-									{params.slug.length === 3 &&
-										params.slug[
-											params.slug.length - 2
-										].replace(/_/g, " ") +
-											" - " +
-											params.slug[
-												params.slug.length - 1
-											].replace(/_/g, " ")}
+									{params.slug[
+										params.slug.length - 1
+									].replace(/_/g, " ")}
 								</h1>
 
 								<h2 className="text-center text-2xl text-gray-700">
-									{params.slug.length === 1
-										? "Select a module from the sidebar"
-										: "Select a lecture from the sidebar"}
+									Select a topic from the sidebar
 								</h2>
 							</>
 						)}
