@@ -6,7 +6,7 @@ import { getTree, getPaths } from "@/lib/tree";
 import { getPostData } from "@/lib/lecture";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import HomePage from "@/components/learn_code/homepage";
+import HomePage from "@/components/learn_contribute/homepage";
 function Lecture({ tree, postData, params }) {
 	const router = useRouter();
 	const node = useRef();
@@ -63,7 +63,7 @@ function Lecture({ tree, postData, params }) {
 			<NavBar toggleFunction={toggleSidebar} ref={node2} />
 			<div className="sm:flex main-content">
 				<Sidebar
-					category={"learn_code"}
+					category={"learn_contribute"}
 					toggle={sidebarVisible}
 					ref={node}
 					tree={tree}
@@ -79,7 +79,7 @@ function Lecture({ tree, postData, params }) {
 								<h2 className="text-center text-lg text-gray-700">
 									{params.slug.length > 1
 										? params.slug[0].replace(/_/g, " ")
-										: "Learn to Code"}
+										: "Learn to Contribute"}
 								</h2>
 							</div>
 							<hr className="pb-4" />
@@ -142,8 +142,8 @@ function Lecture({ tree, postData, params }) {
 export default Lecture;
 
 export async function getStaticProps({ params }) {
-	const postData = await getPostData(params, "learn_code");
-	const tree = getTree("learn_code");
+	const postData = await getPostData(params, "learn_contribute");
+	const tree = getTree("learn_contribute");
 	return {
 		props: {
 			tree,
@@ -154,7 +154,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-	const paths = getPaths("learn_code");
+	const paths = getPaths("learn_contribute");
 	return {
 		paths: paths,
 		fallback: false,

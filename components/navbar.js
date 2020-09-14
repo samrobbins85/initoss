@@ -38,7 +38,9 @@ const NavBar = React.forwardRef((props, ref) => {
 				<Link href="/learn_code">
 					<a className="px-4">Learn to Code</a>
 				</Link>
-				<span className="px-4">Learn to Contribute</span>
+				<Link href="/learn_contribute">
+					<a className="px-4">Learn to Contribute</a>
+				</Link>
 				<span className="px-4">Practice Contributing</span>
 				<span className="px-4">Contribute</span>
 			</div>

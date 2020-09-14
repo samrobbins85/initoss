@@ -21,7 +21,7 @@ const Sidebar = React.forwardRef((props, ref) => {
 							return (
 								<LinkList
 									key={elem.name}
-									section={"learn_code"}
+									section={props.category}
 									lecture={elem.name}
 								/>
 							);
@@ -36,7 +36,7 @@ const Sidebar = React.forwardRef((props, ref) => {
 										{elem.children.map((lecture) => (
 											<LinkList
 												key={lecture.name}
-												section={"learn_code"}
+												section={props.category}
 												subsection={elem.name}
 												lecture={lecture.name}
 											/>
