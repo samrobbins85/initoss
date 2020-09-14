@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import renderMathInElement from "katex/dist/contrib/auto-render.mjs";
 import HomePage from "@/components/learn_code/homepage";
 function Lecture({ tree, postData, params }) {
+	console.log(tree);
 	const router = useRouter();
 	const node = useRef();
 	const node2 = useRef();

@@ -6,16 +6,19 @@ export default function LinkList(props) {
 				activeClassName="bg-blue-100 text-blue-800 rounded hover:text-blue-800"
 				href={
 					"/" +
-					props.year +
+					props.section +
 					"/" +
-					props.module +
-					"/" +
-					(props.submodule ? props.submodule + "/" : "") +
+					(props.subsection ? props.subsection + "/" : "") +
 					props.lecture.replace(/\.[^/.]+$/, "")
 				}
 			>
 				<a className="hover:text-gray-900 text-gray-600 font-medium block relative py-1 pl-2">
-					{props.lecture.replace(/\.[^/.]+$/, "").replace(/_/g, " ")}
+					{
+						props.lecture
+							.replace(/\.[^/.]+$/, "")
+							.replace(/_/g, " ")
+							.split("-")[1]
+					}
 				</a>
 			</ActiveLink>
 		</li>
