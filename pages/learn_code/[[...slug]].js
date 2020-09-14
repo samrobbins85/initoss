@@ -1,13 +1,13 @@
 import { useState, useRef, useEffect } from "react";
-import MainContent from "../../components/main_content";
-import Sidebar from "../../components/sidebar/sidebar";
-import NavBar from "../../components/navbar";
-import { getTree, getPaths } from "../../lib/tree";
-import { getPostData } from "../../lib/lecture";
+import MainContent from "@/components/main_content";
+import Sidebar from "@/components/sidebar/sidebar";
+import NavBar from "@/components/navbar";
+import { getTree, getPaths } from "@/lib/tree";
+import { getPostData } from "@/lib/lecture";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import renderMathInElement from "katex/dist/contrib/auto-render.mjs";
-import HomePage from "../../components/homepage";
+import HomePage from "@/components/learn_code/homepage";
 function Lecture({ tree, postData, params }) {
 	const router = useRouter();
 	const node = useRef();

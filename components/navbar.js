@@ -23,7 +23,15 @@ const NavBar = React.forwardRef((props, ref) => {
 			</span>
 			<span className="hidden sm:block ">
 				<Link href="/">
-					<a>{"init.OSS"}</a>
+					<a>
+						<span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500 text-center inline-block">
+							init
+						</span>
+						.
+						<span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-orange-500 text-center inline-block">
+							OSS
+						</span>
+					</a>
 				</Link>
 			</span>
 			<div className="flex justify-start items-center">
