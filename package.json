@@ -27,7 +27,7 @@
 		"remark-emoji": "^2.1.0",
 		"remark-html": "^12.0.0",
 		"remark-slug": "^6.0.0",
-		"tailwindcss": "^1.8.8"
+		"tailwindcss": "^1.8.10"
 	},
 	"devDependencies": {
 		"@tailwindcss/custom-forms": "^0.2.1",
