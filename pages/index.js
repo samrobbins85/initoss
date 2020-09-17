@@ -12,7 +12,7 @@ function Lecture() {
 					content="Getting started with contributing to open source software"
 				/>
 			</Head>
-			<NavBar />
+			<NavBar sidebar={false} />
 			<div className="flex min-h-screen w-full flex-col">
 				<MainContent>
 					<div className="p-6 pt-24 pb-12 flex justify-center">

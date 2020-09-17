@@ -4,24 +4,26 @@ import Link from "next/link";
 const NavBar = React.forwardRef((props, ref) => {
 	return (
 		<nav className="fixed h-16 p-4 bg-white border-b border-gray-200 shadow w-full z-20 flex justify-between">
-			<span className="visible sm:hidden" ref={ref}>
-				<button
-					onClick={() => props.toggleFunction()}
-					aria-label="Open Side Navbar"
-				>
-					<svg
-						fill="none"
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						strokeWidth="2"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-						className="h-5"
+			{props.sidebar && (
+				<span className="visible sm:hidden" ref={ref}>
+					<button
+						onClick={() => props.toggleFunction()}
+						aria-label="Open Side Navbar"
 					>
-						<path d="M4 6h16M4 12h16M4 18h16"></path>
-					</svg>
-				</button>
-			</span>
+						<svg
+							fill="none"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth="2"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							className="h-5"
+						>
+							<path d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+					</button>
+				</span>
+			)}
 			<span className="hidden sm:block ">
 				<Link href="/">
 					<a className="text-xl">

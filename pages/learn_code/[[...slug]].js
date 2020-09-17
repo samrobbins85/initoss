@@ -61,7 +61,7 @@ function Lecture({ tree, postData, params }) {
 					content="Getting started with contributing to open source software"
 				/>
 			</Head>
-			<NavBar toggleFunction={toggleSidebar} ref={node2} />
+			<NavBar toggleFunction={toggleSidebar} ref={node2} sidebar={true} />
 			<div className="flex">
 				<Sidebar
 					category={"learn_code"}

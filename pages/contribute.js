@@ -12,7 +12,7 @@ export default function Contribute() {
 					content="Getting started with contributing to open source software"
 				/>
 			</Head>
-			<NavBar />
+			<NavBar sidebar={false} />
 			<div className="flex flex-col min-h-screen">
 				<MainContent>
 					<div className="p-6 pt-24 pb-12 flex justify-center">
