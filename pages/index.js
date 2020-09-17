@@ -1,6 +1,7 @@
 import MainContent from "../components/main_content";
 import NavBar from "../components/navbar";
 import Head from "next/head";
+import Footer from "@/components/footer";
 function Lecture() {
 	return (
 		<>
@@ -12,7 +13,7 @@ function Lecture() {
 				/>
 			</Head>
 			<NavBar />
-			<div className="sm:flex main-content">
+			<div className="flex min-h-screen w-full flex-col">
 				<MainContent>
 					<div className="p-6 pt-24 pb-12 flex justify-center">
 						<link
@@ -77,6 +78,7 @@ function Lecture() {
 						</div>
 					</div>
 				</MainContent>
+				<Footer />
 			</div>
 		</>
 	);

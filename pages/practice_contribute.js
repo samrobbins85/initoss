@@ -1,6 +1,7 @@
 import MainContent from "../components/main_content";
 import NavBar from "../components/navbar";
 import Head from "next/head";
+import Footer from "@/components/footer";
 export default function Practice_Contribute() {
 	return (
 		<>
@@ -12,7 +13,7 @@ export default function Practice_Contribute() {
 				/>
 			</Head>
 			<NavBar />
-			<div className="sm:flex main-content">
+			<div className="flex flex-col min-h-screen">
 				<MainContent>
 					<div className="p-6 pt-24 pb-12 flex justify-center">
 						<div className="grid">
@@ -26,6 +27,7 @@ export default function Practice_Contribute() {
 						</div>
 					</div>
 				</MainContent>
+				<Footer />
 			</div>
 		</>
 	);
