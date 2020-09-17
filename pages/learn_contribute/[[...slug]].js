@@ -8,13 +8,12 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import HomePage from "@/components/learn_contribute/homepage";
 import Footer from "@/components/footer";
-function Lecture({ tree, postData, params }) {
+function Lecture({ tree, postData, params, sidebar, setSidebar }) {
 	const router = useRouter();
 	const node = useRef();
 	const node2 = useRef();
-	const [sidebarVisible, setSidebarVisible] = useState(false);
 	function toggleSidebar() {
-		setSidebarVisible(!sidebarVisible);
+		setSidebar(!sidebar);
 	}
 
 	useEffect(() => {
@@ -30,8 +29,10 @@ function Lecture({ tree, postData, params }) {
 	});
 
 	useEffect(() => {
-		router.events.on("routeChangeComplete", function () {
-			setSidebarVisible(false);
+		router.events.on("routeChangeComplete", (url) => {
+			if (url !== "/learn_contribute" && url !== "undefined") {
+				setSidebar(false);
+			}
 		});
 	}, []);
 
@@ -44,7 +45,7 @@ function Lecture({ tree, postData, params }) {
 			return;
 		}
 		// outside click
-		setSidebarVisible(false);
+		setSidebar(false);
 	};
 	return (
 		<>
@@ -65,13 +66,13 @@ function Lecture({ tree, postData, params }) {
 			<div className="flex">
 				<Sidebar
 					category={"learn_contribute"}
-					toggle={sidebarVisible}
+					toggle={sidebar}
 					ref={node}
 					tree={tree}
 					slug={params.slug}
 				/>
 				<div className="flex flex-col min-h-screen w-full">
-					<MainContent toggle={sidebarVisible}>
+					<MainContent toggle={sidebar}>
 						{postData.contentHtml !== undefined && (
 							<>
 								<div className="p-6 pb-12">

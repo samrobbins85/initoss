@@ -4,27 +4,25 @@ import Link from "next/link";
 const NavBar = React.forwardRef((props, ref) => {
 	return (
 		<nav className="fixed h-16 p-4 bg-white border-b border-gray-200 shadow w-full z-20 flex justify-between">
-			{props.sidebar && (
-				<span className="visible sm:hidden" ref={ref}>
-					<button
-						onClick={() => props.toggleFunction()}
-						aria-label="Open Side Navbar"
+			<span className="visible md:hidden" ref={ref}>
+				<button
+					onClick={() => props.toggleFunction()}
+					aria-label="Open Side Navbar"
+				>
+					<svg
+						fill="none"
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						strokeWidth="2"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						className="h-5"
 					>
-						<svg
-							fill="none"
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth="2"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							className="h-5"
-						>
-							<path d="M4 6h16M4 12h16M4 18h16"></path>
-						</svg>
-					</button>
-				</span>
-			)}
-			<span className="hidden sm:block ">
+						<path d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
+			</span>
+			<span className="block ">
 				<Link href="/">
 					<a className="text-xl">
 						<span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500 text-center inline-block">
@@ -37,7 +35,7 @@ const NavBar = React.forwardRef((props, ref) => {
 					</a>
 				</Link>
 			</span>
-			<div className="flex justify-start items-center">
+			<div className="hidden md:flex justify-start items-center ">
 				<ActiveLink href="/learn_code" activeClassName="font-semibold">
 					<a className="px-4">Learn to Code</a>
 				</ActiveLink>
@@ -58,7 +56,7 @@ const NavBar = React.forwardRef((props, ref) => {
 				</ActiveLink>
 			</div>
 			<a
-				className="hidden sm:flex"
+				className="flex"
 				href="https://github.com/samrobbins85/initoss"
 				aria-label="GitHub Repository"
 			>
