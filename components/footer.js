@@ -1,6 +1,44 @@
 export default function Footer() {
 	return (
-		<footer className="w-full bg-gray-200 text-center py-4 footer">
+		<footer className="w-full bg-gray-200 text-center py-4 flex justify-evenly flex-wrap gap-y-2">
+			<div>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					className="h-6 inline-block pr-1"
+				>
+					<path
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						strokeWidth={2}
+						d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+					/>
+				</svg>
+				with
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					className="h-6 inline-block px-1 stroke-current text-pink-500"
+				>
+					<path
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						strokeWidth={2}
+						d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+					/>
+				</svg>
+				by{" "}
+				<a
+					href="https://github.com/samrobbins85"
+					className="text-blue-600 hover:underline"
+				>
+					Sam Robbins
+				</a>
+			</div>
 			<a href="https://vercel.com?utm_source=initoss&utm_campaign=oss">
 				<span className="pr-2">Powered by</span>
 				<svg
