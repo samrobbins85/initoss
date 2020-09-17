@@ -28,13 +28,13 @@ function Lecture({ tree, postData, params, sidebar, setSidebar }) {
 		};
 	});
 
-	useEffect(() => {
-		router.events.on("routeChangeComplete", (url) => {
-			if (url !== "/learn_code" && url !== "undefined") {
-				setSidebar(false);
-			}
-		});
-	}, []);
+	// useEffect(() => {
+	// 	router.events.on("routeChangeComplete", (url) => {
+	// 		if (url !== "/learn_code" && url !== "undefined") {
+	// 			setSidebar(false);
+	// 		}
+	// 	});
+	// }, []);
 
 	const handleClickOutside = (e) => {
 		if (
