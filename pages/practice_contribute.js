@@ -1,5 +1,5 @@
-import MainContent from "../components/main_content";
-import NavBar from "../components/navbar";
+import MainContent from "@/components/main_content";
+import NavBar from "@/components/navbar";
 import Head from "next/head";
 import Footer from "@/components/footer";
 export default function Practice_Contribute() {
