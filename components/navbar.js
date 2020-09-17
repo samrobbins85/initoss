@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import ActiveLink from "@/components/ActiveLink";
 import Link from "next/link";
 const NavBar = React.forwardRef((props, ref) => {
 	return (
@@ -35,14 +36,24 @@ const NavBar = React.forwardRef((props, ref) => {
 				</Link>
 			</span>
 			<div className="flex justify-start items-center">
-				<Link href="/learn_code">
+				<ActiveLink href="/learn_code" activeClassName="font-semibold">
 					<a className="px-4">Learn to Code</a>
-				</Link>
-				<Link href="/learn_contribute">
+				</ActiveLink>
+				<ActiveLink
+					href="/learn_contribute"
+					activeClassName="font-semibold"
+				>
 					<a className="px-4">Learn to Contribute</a>
-				</Link>
-				<span className="px-4">Practice Contributing</span>
-				<span className="px-4">Contribute</span>
+				</ActiveLink>
+				<ActiveLink
+					href="/practice_contribute"
+					activeClassName="font-semibold"
+				>
+					<a className="px-4">Practice Contributing</a>
+				</ActiveLink>
+				<ActiveLink href="/contribute" activeClassName="font-semibold">
+					<a className="px-4">Contribute</a>
+				</ActiveLink>
 			</div>
 			<a
 				className="hidden sm:flex"
