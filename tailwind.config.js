@@ -32,7 +32,7 @@ module.exports = {
 			},
 		},
 	},
-	variants: {},
+	variants: { animation: ["responsive", "hover"] },
 	plugins: [
 		require("@tailwindcss/typography"),
 		require("@tailwindcss/custom-forms"),

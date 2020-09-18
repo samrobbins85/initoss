@@ -22,7 +22,7 @@ export default function Footer() {
 					fill="none"
 					viewBox="0 0 24 24"
 					stroke="currentColor"
-					className="h-6 inline-block px-1 stroke-current text-pink-500"
+					className="h-6 inline-block px-1 stroke-current text-pink-500 hover:animate-pulse"
 				>
 					<path
 						strokeLinecap="round"

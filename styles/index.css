@@ -1,50 +1,11 @@
-/* Make overlines in LaTeX more clear */
-
-span.overline-line {
-	border-color: #4a5568 !important;
-}
-
 @tailwind base;
 @tailwind components;
-
-/* Offset content by navbar */
-.main-content {
-	height: calc(100vh - 3rem);
-}
-
-/* Fix overflow for KaTeX display */
-
-.katex-display {
-	@apply overflow-x-auto;
-	@apply overflow-y-hidden;
-	@apply py-4;
-}
 
 /* Centers images in text */
 
 .prose p img {
 	@apply mx-auto;
 	@apply block;
-}
-
-/* Styling for anchor links */
-
-.prose h1 a,
-.prose h2 a,
-.prose h3 a,
-.prose h4 a,
-.prose h5 a,
-.prose h6 a {
-	@apply inline-block opacity-0 ml-1;
-}
-
-.prose h1:hover a,
-.prose h2:hover a,
-.prose h3:hover a,
-.prose h4:hover a,
-.prose h5:hover a,
-.prose h6:hover a {
-	@apply opacity-100;
 }
 
 /*  This offsets the links by the size of the navbar */
@@ -55,40 +16,18 @@ span.overline-line {
 	margin: -4rem 0 0; /* negative fixed header height */
 }
 .bmc-button img {
-	height: 34px !important;
-	width: 35px !important;
-	margin-bottom: 1px !important;
-	box-shadow: none !important;
-	border: none !important;
-	vertical-align: middle !important;
+	@apply h-8 w-8 align-middle mb-px;
 }
 .bmc-button {
-	padding: 7px 15px 7px 10px !important;
-	line-height: 35px !important;
-	height: 51px !important;
-	text-decoration: none !important;
-	display: inline-flex !important;
-	color: #ffffff !important;
+	@apply inline-flex box-border text-white text-2xl shadow-xl my-0 mx-auto rounded-md tracking-wide px-3 py-2;
 	background-color: #ff813f !important;
-	border-radius: 8px !important;
-	border: 1px solid transparent !important;
-	font-size: 24px !important;
-	letter-spacing: 0.6px !important;
-	box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
-	-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
-	margin: 0 auto !important;
 	font-family: "Cookie", cursive !important;
-	-webkit-box-sizing: border-box !important;
-	box-sizing: border-box !important;
 }
+
 .bmc-button:hover,
 .bmc-button:active,
 .bmc-button:focus {
-	-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
-	text-decoration: none !important;
-	box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
-	opacity: 0.85 !important;
-	color: #ffffff !important;
+	@apply shadow-lg opacity-75;
 }
 
 /* Fix for algolia docsearch on mobile version */
