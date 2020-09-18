@@ -61,6 +61,7 @@ function Lecture({ tree, postData, params, sidebar, setSidebar }) {
 					toggle={sidebar}
 					ref={node}
 					tree={tree}
+					tes
 					slug={params.slug}
 				/>
 				<div className="flex flex-col min-h-screen w-full">
@@ -89,7 +90,7 @@ function Lecture({ tree, postData, params, sidebar, setSidebar }) {
 										<a
 											className="flex content-center hover:underline text-blue-700"
 											href={
-												"https://github.com/samrobbins85/initoss/blob/master/page_content/Learn_to_Code/" +
+												"https://github.com/samrobbins85/initoss/blob/master/page_content/learn_code/" +
 												params.slug.join("/") +
 												".mdx"
 											}
