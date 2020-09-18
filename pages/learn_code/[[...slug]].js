@@ -28,14 +28,6 @@ function Lecture({ tree, postData, params, sidebar, setSidebar }) {
 		};
 	});
 
-	// useEffect(() => {
-	// 	router.events.on("routeChangeComplete", (url) => {
-	// 		if (url !== "/learn_code" && url !== "undefined") {
-	// 			setSidebar(false);
-	// 		}
-	// 	});
-	// }, []);
-
 	const handleClickOutside = (e) => {
 		if (
 			node.current.contains(e.target) ||

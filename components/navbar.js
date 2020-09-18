@@ -57,7 +57,7 @@ const NavBar = React.forwardRef((props, ref) => {
 			</div>
 			<a
 				className="flex"
-				href="https://github.com/samrobbins85/initoss"
+				href="https://github.com/init-OSS/initoss"
 				aria-label="GitHub Repository"
 			>
 				<svg viewBox="0 0 24 24" className="h-5 self-center">

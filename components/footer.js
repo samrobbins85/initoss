@@ -1,6 +1,6 @@
 export default function Footer() {
 	return (
-		<footer className="w-full bg-gray-200 text-center py-4 flex justify-evenly flex-wrap gap-y-2">
+		<footer className="w-full bg-gray-200 text-center py-4 flex justify-evenly flex-wrap gap-y-2 gap-x-8">
 			<div>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
