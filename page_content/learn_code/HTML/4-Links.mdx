@@ -1,0 +1,32 @@
+---
+title: Using links in HTML
+---
+
+Links allow you to direct the user to different pages on your site, or to
+different sites on the internet.
+
+Links use the `<a>` tag and `href` attribute in order to work. An example of
+linking to google is
+
+```HTML
+<a href="https://google.com">Google</a>
+```
+
+If you want to link to a page in your site, include all the link after your
+domain, including the slash. For example, if you look at the address bar for
+this page it says `https://initoss.dev/learn_code/HTML/4-Links`, so all you need
+to include is `/learn_code/HTML/4-Links` like this
+
+```HTML
+<a href="/learn_code/HTML/4-Links">Links</a>
+```
+
+If you instead want to link relative to where you are, start the URL with a dot.
+For example, if there was a page under this one called `relative`, using the
+link
+
+```HTML
+<a href="./relative">Links</a>
+```
+
+would link there.
