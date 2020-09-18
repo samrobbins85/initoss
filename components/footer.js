@@ -1,7 +1,7 @@
 export default function Footer() {
 	return (
-		<footer className="w-full bg-gray-200 text-center py-4 flex justify-evenly flex-wrap gap-y-2 gap-x-8">
-			<div>
+		<footer className="w-full bg-gray-200 text-center py-4 flex justify-evenly flex-wrap gap-y-2">
+			<div className="mx-4">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
@@ -39,7 +39,10 @@ export default function Footer() {
 					Sam Robbins
 				</a>
 			</div>
-			<a href="https://vercel.com?utm_source=init-oss&utm_campaign=oss">
+			<a
+				href="https://vercel.com?utm_source=init-oss&utm_campaign=oss"
+				className="mx-4"
+			>
 				<span className="pr-2">Powered by</span>
 				<svg
 					viewBox="0 0 283 64"
