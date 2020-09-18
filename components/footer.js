@@ -39,7 +39,7 @@ export default function Footer() {
 					Sam Robbins
 				</a>
 			</div>
-			<a href="https://vercel.com?utm_source=initoss&utm_campaign=oss">
+			<a href="https://vercel.com?utm_source=init-oss&utm_campaign=oss">
 				<span className="pr-2">Powered by</span>
 				<svg
 					viewBox="0 0 283 64"
