@@ -1,4 +1,4 @@
-  <a aria-label="Vercel logo" href="https://vercel.com?utm_source=initoss&utm_campaign=oss">
+  <a aria-label="Vercel logo" href="https://vercel.com?utm_source=init-oss&utm_campaign=oss">
     <img src="powered-by-vercel.svg">
   </a>
  
