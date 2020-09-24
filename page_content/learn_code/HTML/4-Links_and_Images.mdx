@@ -1,6 +1,8 @@
 ---
-title: Using links in HTML
+title: Using links and images in HTML
 ---
+
+# Links
 
 Links allow you to direct the user to different pages on your site, or to
 different sites on the internet.
@@ -30,3 +32,19 @@ link
 ```
 
 would link there.
+
+# Images
+
+Images are inserted into HTML using the `<img>` tag The source of the image is
+passed in using the `src` attribute, like in the following example
+
+```html
+<img src="image.png" alt="Image description" />
+```
+
+`alt` is provided for if the image can't be found and for accessibility. An
+example of why it might not be found is that you are using an image from a
+remote site and the site has gone down.
+
+As for accessibility, people who use screen readers will be read the `alt` text,
+so it is important for them that it is descriptive.
