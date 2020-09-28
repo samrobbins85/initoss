@@ -26,6 +26,7 @@ module.exports = {
 					pre: {
 						code: {
 							"&:after": { content: "none !important" },
+							"&:before": { content: "none !important" },
 						},
 					},
 				},
