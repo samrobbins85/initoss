@@ -81,3 +81,28 @@ git commit -m "Message"
 
 The `-m` flag here is to provide a message. If you do a simple `git commit` it
 will open your text editor to provide a message.
+
+# Push
+
+A git push is the process of moving the code from your computer to where it is
+hosted.
+
+A project can have multiple **remotes**, which are places the code is stored,
+however most will only have one. The naming convention for a single remote is to
+call it `origin`. This is what the remote will be called if you clone a
+repository.
+
+A git push command is accompanied by the remote you want and the branch in that
+remote, so the most common git push command will be:
+
+```shell
+git push origin main
+```
+
+`main` is moving to be the default branch name over `master`, but you will still
+see many repositories with `master` as the default branch, and so a push command
+would be
+
+```shell
+git push origin master
+```
