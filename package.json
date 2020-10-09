@@ -36,6 +36,6 @@
 		"eslint-plugin-react-hooks": "^4.1.2",
 		"nextjs-sitemap-generator": "^1.1.1",
 		"prettier": "^2.1.2",
-		"prettier-plugin-package": "^1.1.0"
+		"prettier-plugin-package": "^1.2.0"
 	}
 }
