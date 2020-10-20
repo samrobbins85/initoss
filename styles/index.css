@@ -6,6 +6,7 @@
 .prose p img {
 	@apply mx-auto;
 	@apply block;
+	@apply shadow;
 }
 
 /*  This offsets the links by the size of the navbar */
