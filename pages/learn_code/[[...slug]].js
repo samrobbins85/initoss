@@ -8,7 +8,22 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import HomePage from "@/components/learn_code/homepage";
 import Footer from "@/components/footer";
-function Lecture({ tree, postData, params, sidebar, setSidebar }) {
+import renderToString from "next-mdx-remote/render-to-string";
+import hydrate from "next-mdx-remote/hydrate";
+import slug from "remark-slug";
+import highlightCode from "@mapbox/rehype-prism";
+
+import MyImg from "@/components/image";
+import Definition from "@/components/definition";
+import Important from "@/components/important";
+const components = {
+	img: MyImg,
+	Definition,
+	Important,
+};
+
+function Lecture({ tree, postData, params, sidebar, setSidebar, source }) {
+	const content = hydrate(source, { components });
 	const router = useRouter();
 	const node = useRef();
 	const node2 = useRef();
@@ -80,12 +95,9 @@ function Lecture({ tree, postData, params, sidebar, setSidebar }) {
 								</div>
 								<hr className="pb-4" />
 								<div className="pb-6">
-									<div
-										className="prose pb-6 mx-auto"
-										dangerouslySetInnerHTML={{
-											__html: postData.contentHtml,
-										}}
-									/>
+									<div className="prose pb-6 mx-auto">
+										{content}
+									</div>
 									<div className="flex justify-center">
 										<a
 											className="flex content-center hover:underline text-blue-700"
@@ -141,12 +153,20 @@ export default Lecture;
 
 export async function getStaticProps({ params }) {
 	const postData = await getPostData(params, "learn_code");
+	const source = await renderToString(postData.contentHtml, {
+		components: components,
+		mdxOptions: {
+			remarkPlugins: [slug],
+			rehypePlugins: [highlightCode],
+		},
+	});
 	const tree = getTree("learn_code");
 	return {
 		props: {
 			tree,
 			postData,
 			params,
+			source,
 		},
 	};
 }
