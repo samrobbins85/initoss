@@ -13,7 +13,7 @@
 		"@mdx-js/loader": "^1.6.18",
 		"@mdx-js/mdx": "^1.6.18",
 		"@tailwindcss/typography": "^0.2.0",
-		"autoprefixer": "^10.0.1",
+		"autoprefixer": "^10.0.2",
 		"directory-tree": "^2.2.4",
 		"gray-matter": "^4.0.2",
 		"katex": "^0.12.0",
