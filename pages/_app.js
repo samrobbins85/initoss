@@ -1,6 +1,5 @@
 import "../styles/index.css";
 import "../styles/prism-atom-dark.css";
-import "katex/dist/katex.min.css";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import * as gtag from "../lib/gtag";

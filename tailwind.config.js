@@ -4,27 +4,26 @@ const round = (num) =>
 		.replace(/(\.[0-9]+?)0+$/, "$1")
 		.replace(/\.0$/, "");
 const rem = (px) => `${round(px / 16)}rem`;
-const em = (px, base) => `${round(px / base)}em`;
+const colors = require("tailwindcss/colors");
 module.exports = {
 	purge: [
 		"./components/**/*.{js,ts,jsx,tsx}",
 		"./pages/**/*.{js,ts,jsx,tsx}",
 		"./layouts/**/*.{js,ts,jsx,tsx}",
 		"./lib/**/*.{js,ts,jsx,tsx}",
-		"./notes/**/*.md",
 	],
 	theme: {
 		extend: {
 			colors: {
-				code: {
-					green: "var(--color-code-green)",
-					yellow: "var(--color-code-yellow)",
-					purple: "var(--color-code-purple)",
-					red: "var(--color-code-red)",
-					blue: "var(--color-code-blue)",
-					white: "var(--color-code-white)",
-				},
-				"green-150": "#e6ffee",
+				gray: colors.gray,
+				teal: colors.teal,
+				orange: colors.orange,
+				fuchsia: colors.fuchsia,
+				cyan: colors.cyan,
+				lime: colors.lime,
+				"light-blue": colors.lightBlue,
+				rose: colors.rose,
+				emerald: colors.emerald,
 			},
 		},
 		typography: (theme) => ({
@@ -53,12 +52,5 @@ module.exports = {
 		}),
 	},
 	variants: { animation: ["responsive", "hover"] },
-	plugins: [
-		require("@tailwindcss/typography"),
-		require("@tailwindcss/custom-forms"),
-	],
-	future: {
-		removeDeprecatedGapUtilities: true,
-		purgeLayersByDefault: true,
-	},
+	plugins: [require("@tailwindcss/typography")],
 };
