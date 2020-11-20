@@ -27,7 +27,7 @@ module.exports = {
 			},
 		},
 		typography: (theme) => ({
-			default: {
+			DEFAULT: {
 				css: {
 					"code::after": {
 						content: "none",
