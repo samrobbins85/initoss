@@ -25,31 +25,31 @@ module.exports = {
 				rose: colors.rose,
 				emerald: colors.emerald,
 			},
-		},
-		typography: (theme) => ({
-			DEFAULT: {
-				css: {
-					"code::after": {
-						content: "none",
-					},
-					"code::before": {
-						content: "none",
-					},
-					"pre code::after": {
-						content: "none",
-					},
-					code: {
-						backgroundColor: theme("colors.gray.200"),
-						color: theme("colors.gray.700"),
-						padding: "4px",
-						borderRadius: rem(2),
-					},
-					blockquote: {
-						quotes: "none",
+			typography: (theme) => ({
+				DEFAULT: {
+					css: {
+						"code::after": {
+							content: "none",
+						},
+						"code::before": {
+							content: "none",
+						},
+						"pre code::after": {
+							content: "none",
+						},
+						code: {
+							backgroundColor: theme("colors.gray.200"),
+							color: theme("colors.gray.700"),
+							padding: "4px",
+							borderRadius: rem(2),
+						},
+						blockquote: {
+							quotes: "none",
+						},
 					},
 				},
-			},
-		}),
+			}),
+		},
 	},
 	variants: { animation: ["responsive", "hover"] },
 	plugins: [require("@tailwindcss/typography")],
