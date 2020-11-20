@@ -24,6 +24,7 @@ module.exports = {
 				"light-blue": colors.lightBlue,
 				rose: colors.rose,
 				emerald: colors.emerald,
+				"cool-gray": colors.coolGray,
 			},
 			typography: (theme) => ({
 				DEFAULT: {
@@ -45,6 +46,9 @@ module.exports = {
 						},
 						blockquote: {
 							quotes: "none",
+						},
+						pre: {
+							backgroundColor: theme("colors.cool-gray.800"),
 						},
 					},
 				},
