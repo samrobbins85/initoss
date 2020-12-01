@@ -9,7 +9,7 @@
 		"start": "next start"
 	},
 	"dependencies": {
-		"@feedback-fish/react": "^1.2.0",
+		"@feedback-fish/react": "^1.2.1",
 		"@mapbox/rehype-prism": "^0.5.0",
 		"@mdx-js/loader": "^1.6.18",
 		"@mdx-js/mdx": "^1.6.18",
