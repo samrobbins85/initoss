@@ -1,6 +1,6 @@
 const colors = require("tailwindcss/colors");
 module.exports = {
-	presets: [require("./typography_fix.js")],
+	presets: [require("@samrobbins/typography")],
 	purge: [
 		"./components/**/*.{js,ts,jsx,tsx}",
 		"./pages/**/*.{js,ts,jsx,tsx}",
