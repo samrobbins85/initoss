@@ -3,7 +3,7 @@ import NavBar from "../components/navbar";
 import Head from "next/head";
 import Footer from "@/components/footer";
 import TopSidebar from "@/components/sidebar/top_sidebar";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 
 export default function Practice_Contribute({ sidebar, setSidebar }) {
 	const node = useRef();

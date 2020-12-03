@@ -1,11 +1,10 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import MainContent from "@/components/main_content";
 import Sidebar from "@/components/sidebar/sidebar";
 import NavBar from "@/components/navbar";
 import { getTree, getPaths } from "@/lib/tree";
 import { getPostData } from "@/lib/lecture";
 import Head from "next/head";
-import { useRouter } from "next/router";
 import HomePage from "@/components/learn_code/homepage";
 import Footer from "@/components/footer";
 import renderToString from "next-mdx-remote/render-to-string";
@@ -14,8 +13,8 @@ import slug from "remark-slug";
 import highlightCode from "@mapbox/rehype-prism";
 
 import MyImg from "@/components/image";
-import Definition from "@/components/definition";
-import Important from "@/components/important";
+
+import { Definition, Important } from "@samrobbins/admonition-components";
 const components = {
 	img: MyImg,
 	Definition,
@@ -24,7 +23,6 @@ const components = {
 
 function Lecture({ tree, postData, params, sidebar, setSidebar, source }) {
 	const content = hydrate(source, { components });
-	const router = useRouter();
 	const node = useRef();
 	const node2 = useRef();
 	function toggleSidebar() {
