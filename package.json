@@ -14,7 +14,7 @@
 		"@mdx-js/loader": "^1.6.18",
 		"@mdx-js/mdx": "^1.6.18",
 		"@samrobbins/admonition-components": "^1.2.0",
-		"@samrobbins/typography": "^1.0.0",
+		"@samrobbins/typography": "^1.1.0",
 		"@tailwindcss/typography": "^0.3.1",
 		"autoprefixer": "^10.0.2",
 		"directory-tree": "^2.2.4",
