@@ -16,7 +16,7 @@
 		"@samrobbins/admonition-components": "^1.4.0",
 		"@samrobbins/typography": "^1.1.0",
 		"@tailwindcss/typography": "^0.3.1",
-		"autoprefixer": "^10.0.2",
+		"autoprefixer": "^10.1.0",
 		"directory-tree": "^2.2.4",
 		"gray-matter": "^4.0.2",
 		"next": "^10.0.1",
