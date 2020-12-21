@@ -34,7 +34,7 @@
 		"tailwindcss": "^2.0.2"
 	},
 	"devDependencies": {
-		"eslint": "^7.15.0",
+		"eslint": "^7.16.0",
 		"eslint-plugin-react": "^7.21.3",
 		"eslint-plugin-react-hooks": "^4.2.0",
 		"nextjs-sitemap-generator": "^1.1.3",
