@@ -3,8 +3,7 @@ import NavBar from "../components/navbar";
 import Head from "next/head";
 import Footer from "@/components/footer";
 import TopSidebar from "@/components/sidebar/top_sidebar";
-import { useRef, useEffect, useState } from "react";
-import router from "next/router";
+import { useRef, useEffect } from "react";
 function Lecture({ sidebar, setSidebar }) {
 	const node = useRef();
 	const node2 = useRef();

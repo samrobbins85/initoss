@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React from "react";
 import { FeedbackFish } from "@feedback-fish/react";
 import ActiveLink from "@/components/ActiveLink";
 import Link from "next/link";

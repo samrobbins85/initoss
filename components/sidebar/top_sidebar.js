@@ -1,5 +1,7 @@
+/* eslint-disable react/display-name */
 // This is the top level sidebar included on the homepage
 import ActiveLink from "@/components/ActiveLink";
+import React from "react";
 const TopSidebar = React.forwardRef((props, ref) => {
 	const toggle = props.toggle ? "" : "hidden md:block";
 	return (
